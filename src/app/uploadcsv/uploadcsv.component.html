@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <!-- Existing symbols -->
+</svg>
+
+<form [formGroup]="form" (ngSubmit)="submit()" class="modal-body">
+  <label class="title-upload"></label>
+  <div class="file-upload-container">
+    <p>charger un fichier pour ajouter une liste des clients et générer des codes</p>
+    <div class="input-group mb-3">
+      <input type="file" class="form-control" id="file" (change)="onFileChange($event)">
+    </div>
+    <button
+      type="submit"
+      [disabled]="form.invalid"
+      [ngClass]="{'btn-success': form.valid, 'btn-danger': form.invalid}">
+      Importer
+    </button>
+    <div class="progress" *ngIf="isUploading">
+      <div class="progress-bar" [style.width.%]="progress"></div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,151 @@
+.consume-code-container {
+  .search-container {
+    margin: 20px;
+    text-align: center;
+
+    .search-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #0064b0; /* Bleu personnalisé */
+    }
+
+    .search-forms {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+
+      .search-input {
+        padding: 10px;
+        border: 1px solid #0064b0; /* Contour bleu personnalisé */
+        border-radius: 5px;
+        width: 200px;
+      }
+
+      .search-button {
+        background-color: #0064b0; /* Bleu personnalisé */
+        color: white;
+        padding: 6px 16px; /* Taille du bouton */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #004c8c; /* Bleu foncé personnalisé */
+        }
+      }
+    }
+  }
+
+  .table-container {
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th {
+        background-color: #0064b0; /* Bleu personnalisé */
+        color: white;
+        padding: 8px; /* Réduire légèrement le padding */
+      }
+
+      td {
+        padding: 8px; /* Réduire légèrement le padding */
+        border: 1px solid #ddd;
+      }
+
+      th, td {
+        text-align: left;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    }
+
+    .mat-header-row {
+      background-color: #0064b0; /* Bleu personnalisé */
+      color: white;
+    }
+
+    .mat-row:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .consumed {
+      color: red;
+      font-weight: bold;
+    }
+
+    .not-consumed {
+      color: green;
+      font-weight: bold;
+    }
+
+    button.mat-button {
+      padding: 6px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+
+      &.btn-active {
+        background-color: #0064b0; /* Bleu personnalisé */
+        color: white;
+
+        &:hover {
+          background-color: #004c8c; /* Bleu foncé personnalisé */
+        }
+      }
+
+      &.btn-disabled {
+        background-color: #E8E8E8; /* Gris pour le bouton désactivé */
+        color: #B0B0B0;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .paginator-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+
+    .paginator-button {
+      background-color: #0064b0; /* Bleu personnalisé */
+      color: white;
+      padding: 6px 16px; /* Réduire la taille des boutons */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #004c8c; /* Bleu foncé personnalisé */
+      }
+
+      &:disabled {
+        background-color: #B0BEC5; /* Gris */
+        cursor: not-allowed;
+      }
+    }
+
+    .paginator-info {
+      font-weight: bold;
+      color: #0064b0; /* Bleu personnalisé */
+    }
+  }
+
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
